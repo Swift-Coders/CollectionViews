@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		09401FE520B61AD200EF4F02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09401FE420B61AD200EF4F02 /* AppDelegate.swift */; };
-		09401FE720B61AD200EF4F02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09401FE620B61AD200EF4F02 /* ViewController.swift */; };
+		09401FE720B61AD200EF4F02 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09401FE620B61AD200EF4F02 /* ItemsViewController.swift */; };
 		09401FEA20B61AD200EF4F02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09401FE820B61AD200EF4F02 /* Main.storyboard */; };
 		09401FEC20B61AD400EF4F02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09401FEB20B61AD400EF4F02 /* Assets.xcassets */; };
 		09401FEF20B61AD400EF4F02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09401FED20B61AD400EF4F02 /* LaunchScreen.storyboard */; };
 		09401FFA20B61AD400EF4F02 /* CollectionViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09401FF920B61AD400EF4F02 /* CollectionViewsTests.swift */; };
 		0940200520B61AD400EF4F02 /* CollectionViewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0940200420B61AD400EF4F02 /* CollectionViewsUITests.swift */; };
+		0940201320B62BA600EF4F02 /* TradesyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0940201220B62BA600EF4F02 /* TradesyAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		09401FE120B61AD200EF4F02 /* CollectionViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09401FE420B61AD200EF4F02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09401FE620B61AD200EF4F02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09401FE620B61AD200EF4F02 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		09401FE920B61AD200EF4F02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09401FEB20B61AD400EF4F02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09401FEE20B61AD400EF4F02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		0940200020B61AD400EF4F02 /* CollectionViewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0940200420B61AD400EF4F02 /* CollectionViewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewsUITests.swift; sourceTree = "<group>"; };
 		0940200620B61AD400EF4F02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0940201220B62BA600EF4F02 /* TradesyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradesyAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,10 @@
 		09401FE320B61AD200EF4F02 /* CollectionViews */ = {
 			isa = PBXGroup;
 			children = (
-				09401FE420B61AD200EF4F02 /* AppDelegate.swift */,
-				09401FE620B61AD200EF4F02 /* ViewController.swift */,
+				09401FE620B61AD200EF4F02 /* ItemsViewController.swift */,
 				09401FE820B61AD200EF4F02 /* Main.storyboard */,
-				09401FEB20B61AD400EF4F02 /* Assets.xcassets */,
-				09401FED20B61AD400EF4F02 /* LaunchScreen.storyboard */,
 				09401FF020B61AD400EF4F02 /* Info.plist */,
+				0940201420B62BB700EF4F02 /* Support */,
 			);
 			path = CollectionViews;
 			sourceTree = "<group>";
@@ -123,6 +123,17 @@
 				0940200620B61AD400EF4F02 /* Info.plist */,
 			);
 			path = CollectionViewsUITests;
+			sourceTree = "<group>";
+		};
+		0940201420B62BB700EF4F02 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0940201220B62BA600EF4F02 /* TradesyAPI.swift */,
+				09401FE420B61AD200EF4F02 /* AppDelegate.swift */,
+				09401FEB20B61AD400EF4F02 /* Assets.xcassets */,
+				09401FED20B61AD400EF4F02 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +267,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09401FE720B61AD200EF4F02 /* ViewController.swift in Sources */,
+				0940201320B62BA600EF4F02 /* TradesyAPI.swift in Sources */,
+				09401FE720B61AD200EF4F02 /* ItemsViewController.swift in Sources */,
 				09401FE520B61AD200EF4F02 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
