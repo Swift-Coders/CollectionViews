@@ -12,7 +12,7 @@ class Tradesy {
     /// Fetch items from Tradesy API
     /// - parameter completion: returns a dictionary of categories and a list of their items. called on Main queue.
     static func getItemsByCategory(completion: @escaping ([Category]) -> Void) {
-        guard let apiKey = ProcessInfo.processInfo.environment["API_KEY"] else { return }
+        guard let apiKey = ProcessInfo.processInfo.environment["API_KEY"] else { fatalError("You cannot call this method without the Tradesy API. Create a mock data provider instead.") }
 
         let url = URL(string: "https://api.tradesy.com/2.0.0/search?num_per_page=100")!
         var request = URLRequest(url: url)
